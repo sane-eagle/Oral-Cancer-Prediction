@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>OSMF-RiskAI</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;min-height:100%;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}#clinical-drawer{transition:transform 0.3s cubic-bezier(0.16,1,0.3,1),visibility 0.3s;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#f8f9ff","inverse-on-surface":"#eaf1ff","on-tertiary":"#ffffff","surface-variant":"#d3e4fe","tertiary-container":"#003731","surface-container-high":"#dce9ff","on-secondary-container":"#006f67","on-tertiary-fixed-variant":"#005048","surface-dim":"#cbdbf5","primary-container":"#17324d","on-error":"#ffffff","inverse-surface":"#213145","background":"#f8f9ff","tertiary":"#00201c","surface-container-lowest":"#ffffff","inverse-primary":"#afc9ea","error-container":"#ffdad6","surface-container-highest":"#d3e4fe","primary-fixed":"#d1e4ff","outline-variant":"#c3c6ce","surface-tint":"#47607e","on-primary-fixed-variant":"#2f4865","secondary-fixed":"#9cf2e8","on-surface-variant":"#43474d","secondary-container":"#99efe5","surface-container-low":"#eff4ff","on-primary":"#ffffff","secondary-fixed-dim":"#80d5cb","surface-container":"#e5eeff","on-tertiary-fixed":"#00201c","on-secondary":"#ffffff","primary":"#001d36","tertiary-fixed":"#71f8e4","on-primary-fixed":"#001d36","outline":"#74777e","primary-fixed-dim":"#afc9ea","error":"#ba1a1a","on-primary-container":"#819aba","tertiary-fixed-dim":"#4fdbc8","on-secondary-fixed-variant":"#00504a","surface-bright":"#f8f9ff","on-error-container":"#93000a","secondary":"#006a63","on-surface":"#0b1c30","on-tertiary-container":"#00ab9a","on-background":"#0b1c30","on-secondary-fixed":"#00201d"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-sm":"1rem","space-lg":"1.5rem","space-xl":"2rem","gutter-sm":"1rem","space-sm":"0.5rem","margin":"2rem","space-md":"1rem","space-xs":"0.25rem","gutter":"1.5rem"},"fontFamily":{"body-lg":["Inter"],"headline-lg":["Inter"],"label-sm":["Inter"],"metric-stat":["Inter"],"label-md":["Inter"],"headline-md":["Inter"],"headline-sm":["Inter"],"display-lg":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"headline-lg-mobile":["Inter"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"metric-stat":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-full antialiased"><header class="fixed top-0 inset-x-0 z-40 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="OSMF-RiskAI Emblem" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1Wcwp-177wlCQjZhn0eSfCfE6ZrirjeOr2hWf_7VVEjS8GEBP7wJF_r31CLVPCQkUPqcPB7ducIs4_UTGD1YT3yDAvCPuyVXD1dtqdLDu8Yw993cSZReMZaVVXWkqOAlpsT795nIZoa6xZ667cbG6C0-kQ1beth-ko6z5J12IZ3DVicayKdj5E8j4zWzIyk1mnjJe4iqHlc6N3fEdZ0wTWy2ZnuL4lzpDgWVPeIbYnYOujr2aT1-ymd47A"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary tracking-tight truncate">OSMF-RiskAI</span><span class="bg-secondary-container/60 text-on-secondary-container text-label-sm font-label-sm px-1.5 py-0.5 rounded-full whitespace-nowrap">Research</span></div><span class="text-label-sm font-label-sm text-on-surface-variant truncate">Clinical Intelligence</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><button aria-label="Clinician Profile and Drawer" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors" onclick="document.getElementById('clinical-drawer').classList.remove('-translate-x-full');document.getElementById('drawer-backdrop').classList.remove('opacity-0','pointer-events-none');" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6mrZmy6VwUbBRLWKKHSrsFjctqIpuI0JWNxHCmAvDbjAddOA2hsRaJKrX7P8VNLwa31XZWji1ygHkzxl6aCAnphAVb-_P6BHkPt_RUlESszMwH_K047dB3KPBMPP-2oTOgCXDgjVfWpd0M-Ud-GgJG_vpkTEwFFYVMYPXaz1HVZp5UQpfLtmI8i64SH-fFSilTmrUNHdNYmeJy7X869F6nwQB8q04bNNusys6rYKYTf1Sf5UW5Lnt"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full px-margin-sm py-space-sm space-y-space-md">
+<!-- Clinical Safety Guardrail Banner -->
+<aside class="relative overflow-hidden bg-primary-container text-on-primary rounded-xl p-space-sm shadow-sm flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-surface-container-lowest/10 text-secondary-fixed flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5 mb-0.5">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Clinical Protocol Alert</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed"></span>
+</div>
+<p class="font-body-sm text-body-sm text-primary-fixed leading-snug">
+        AI-generated outputs are intended for research and clinician decision support, not standalone diagnosis.
+      </p>
+</div>
+</aside>
+<!-- Screen Header & Quick Actions -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex flex-col">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Clinical Overview</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Review cases, monitor assessments, and explore model insights.</p>
+</div>
+<!-- Quick Action Bar -->
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="h-11 px-space-md rounded-xl bg-secondary text-on-secondary font-headline-sm text-headline-sm flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">add_task</span>
+<span>+ New Assessment</span>
+</button>
+<button class="h-11 px-space-md rounded-xl bg-surface-container text-primary font-headline-sm text-headline-sm flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">summarize</span>
+<span>View Reports</span>
+</button>
+</div>
+</section>
+<!-- 4 Compact KPI Cards (2x2 Grid) -->
+<section class="grid grid-cols-2 gap-space-sm">
+<!-- Total Cases -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="p-2 rounded-lg bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">Cohort</span>
+</div>
+<div class="mt-2">
+<span class="font-metric-stat text-metric-stat text-primary block leading-none">142</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">Active cohort</span>
+</div>
+</div>
+<!-- Assessments Completed -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="p-2 rounded-lg bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-secondary-container bg-secondary-fixed/30 px-2 py-0.5 rounded-full">83% run</span>
+</div>
+<div class="mt-2">
+<span class="font-metric-stat text-metric-stat text-primary block leading-none">118</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">Multimodal runs</span>
+</div>
+</div>
+<!-- Follow-ups Due -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="p-2 rounded-lg bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[18px]">event_repeat</span>
+</span>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-primary px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+          Needs review
+        </span>
+</div>
+<div class="mt-2">
+<span class="font-metric-stat text-metric-stat text-primary block leading-none">14</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">Pending follow-ups</span>
+</div>
+</div>
+<!-- Model Status -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="p-2 rounded-lg bg-secondary-container text-secondary">
+<span class="material-symbols-outlined text-[18px]">neurology</span>
+</span>
+<span class="font-label-sm text-label-sm bg-secondary-fixed/40 text-on-secondary-container px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+          Live
+        </span>
+</div>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md text-secondary block leading-tight">Model Ready</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-1 truncate">v1.4.2-b0-latefuse</span>
+</div>
+</div>
+</section>
+<!-- Assessment Status Distribution -->
+<section class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-primary">Assessment Progress</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">142 total evaluations</span>
+</div>
+<!-- Multi-segment pill progress bar -->
+<div class="h-2.5 w-full bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full" style="width: 83%;" title="Completed 83%"></div>
+<div class="bg-surface-tint h-full" style="width: 10%;" title="Follow-up Due 10%"></div>
+<div class="bg-surface-variant h-full" style="width: 7%;" title="Pending 7%"></div>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-1 text-center">
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Completed</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary">83%</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-surface-tint"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Follow-up</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary">10%</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-surface-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pending</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary">7%</span>
+</div>
+</div>
+</section>
+<!-- Visual Histology Spotlight Mosaic (2 photo rich items) -->
+<section class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">biotech</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Recent Histology &amp; Habits</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Grad-CAM Attributions</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="relative rounded-lg overflow-hidden bg-surface-container-high aspect-[4/3] group">
+<img class="w-full h-full object-cover" data-alt="Microscopic histopathology tissue biopsy slide of oral submucous fibrosis showing subepithelial collagen hyalinization, chronic inflammatory infiltrate, and cellular atypia under brightfield microscopy with teal and deep navy color tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUDBXHXbHm7JVLZrk4WYcRaBKxlYnH4umcxjiAJI7FirP9D9DHfl1_ZFQUSvgsV9N5EZkuJI4DYehnLaHcBy2FRHJoM0VNX9ZZ1DPZ51g9N8w1MlFgF1F7wFBhlp3U2dfoePV_b6qYqR3msluxFrGLOiQyEWfJsjipXyHQsduJ9fI4JJfu1OIrPfbNCYqbAY7XfrdApcC4_hnxcJ1DoqeRr4RGfD_SONXjmq4_684WwDAy0dvaHu0C"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-2">
+<div>
+<span class="font-label-sm text-label-sm text-secondary-fixed block">OSMF-0042</span>
+<span class="font-body-sm text-body-sm text-on-primary">Buccal mucosa</span>
+</div>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden bg-surface-container-high aspect-[4/3] group">
+<img class="w-full h-full object-cover" data-alt="Close up clinical macroscopic oral cavity examination depicting reticular fibrotic bands on the labial mucosa, pale blanching appearance characteristic of oral submucous fibrosis, soft clinical lighting with high detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXaOu3xx8iTE_D87OVkf-5bhT0L765S06amL92dLK94yOSWpQapXbdMeJPSLlmBdaLBrdVQOsJuWxi3cqEPp9e9ZkzgiS0zCv61K7QhBL7j77cPn3xnVNwl3t4DO8oQXjYjBsRqyUztpa7ROVu0e9gJKcpq_rCcFcF0iZCL6yXwWMzqH-k9_oezAZ6WV6BVLRhBu0VqCj-yCYilo9pdCvFZQLzBx-N7us6LLIfcFXu_g-1pWxceWWv"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-2">
+<div>
+<span class="font-label-sm text-label-sm text-secondary-fixed block">OSMF-0039</span>
+<span class="font-body-sm text-body-sm text-on-primary">Fibrotic band (IV)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Patient Cases -->
+<section class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">folder_managed</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Recent Patient Cases</h2>
+</div>
+<a class="font-label-sm text-label-sm text-secondary font-medium hover:underline flex items-center" href="#">
+<span>View all</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<div class="flex flex-col space-y-space-sm">
+<!-- Case 1: OSMF-0042 -->
+<article class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">OSMF-0042</span>
+<span class="font-label-sm text-label-sm bg-error-container text-on-error-container px-2 py-0.5 rounded-full">Review Req.</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">48y M • Stage III • Last visit: 2 days ago</p>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-md">Completed</span>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-9 rounded-lg bg-surface-container text-primary font-body-sm text-body-sm flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Case</span>
+</button>
+<button class="flex-1 h-9 rounded-lg bg-primary text-on-primary font-body-sm text-body-sm flex items-center justify-center gap-1 hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">assignment_add</span>
+<span>New Assessment</span>
+</button>
+</div>
+</article>
+<!-- Case 2: OSMF-0041 -->
+<article class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">OSMF-0041</span>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-primary px-2 py-0.5 rounded-full">Stage I</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">35y F • Stage I • Last visit: 4 days ago</p>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-variant text-on-surface-variant px-2 py-0.5 rounded-md">Pending</span>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-9 rounded-lg bg-surface-container text-primary font-body-sm text-body-sm flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Case</span>
+</button>
+<button class="flex-1 h-9 rounded-lg bg-secondary text-on-secondary font-body-sm text-body-sm flex items-center justify-center gap-1 active:scale-[0.98] transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Run Pipeline</span>
+</button>
+</div>
+</article>
+<!-- Case 3: OSMF-0039 -->
+<article class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">OSMF-0039</span>
+<span class="font-label-sm text-label-sm bg-error-container text-on-error-container px-2 py-0.5 rounded-full">High Priority</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">52y M • Stage IV • Last visit: 1 week ago</p>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-tint text-on-primary px-2 py-0.5 rounded-md">Follow-up Due</span>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-9 rounded-lg bg-surface-container text-primary font-body-sm text-body-sm flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Case</span>
+</button>
+<button class="flex-1 h-9 rounded-lg bg-primary text-on-primary font-body-sm text-body-sm flex items-center justify-center gap-1 hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">assignment_add</span>
+<span>New Assessment</span>
+</button>
+</div>
+</article>
+<!-- Case 4: OSMF-0038 -->
+<article class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">OSMF-0038</span>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full">Stable</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">29y M • Stage II • Last visit: Oct 12</p>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-md">Completed</span>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-9 rounded-lg bg-surface-container text-primary font-body-sm text-body-sm flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Case</span>
+</button>
+<button class="flex-1 h-9 rounded-lg bg-primary text-on-primary font-body-sm text-body-sm flex items-center justify-center gap-1 hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">assignment_add</span>
+<span>New Assessment</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- Recent Activity Feed -->
+<section class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">update</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Recent Activity Feed</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live audit sync</span>
+</div>
+<div class="relative pl-6 space-y-space-md before:content-[''] before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high">
+<!-- Item 1 -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-secondary ring-4 ring-surface-container-lowest"></span>
+<span class="font-body-md text-body-md text-primary font-medium">Image quality check passed</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">OSMF-0042</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• 10 mins ago</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-secondary ring-4 ring-surface-container-lowest"></span>
+<span class="font-body-md text-body-md text-primary font-medium">Multimodal assessment completed</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">OSMF-0042</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• 15 mins ago</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-surface-tint ring-4 ring-surface-container-lowest"></span>
+<span class="font-body-md text-body-md text-primary font-medium">Follow-up outcome recorded</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">OSMF-0035</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• 2 hrs ago</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-primary-container ring-4 ring-surface-container-lowest"></span>
+<span class="font-body-md text-body-md text-primary font-medium">New case registered in cohort</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">OSMF-0043</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• Yesterday</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Model Readiness Panel -->
+<section class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">memory</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Inference Engine Specs</h2>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-fixed/40 text-on-secondary-container px-2 py-0.5 rounded-full">PyTorch Active</span>
+</div>
+<div class="grid grid-cols-1 gap-2 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Loaded Architecture</span>
+<span class="font-body-sm text-body-sm text-primary font-medium">EfficientNet-B0 + MLP v1.4.2</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Environment</span>
+<span class="font-body-sm text-body-sm text-primary font-medium">FastAPI Microservice (TLS)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Validation Cohort</span>
+<span class="font-body-sm text-body-sm text-primary font-medium">5-Fold CV (Oct 2024)</span>
+</div>
+</div>
+<!-- Synthetic Demo Banner -->
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-error">science</span>
+<p class="font-body-sm text-body-sm leading-snug">
+        Synthetic Demo Data — Not for Clinical Use. Model is operating under an investigational sandbox profile.
+      </p>
+</div>
+</section>
+</div>
+<script>
+  // Dynamic client micro-interactions for case cards and metric feedback
+  document.querySelectorAll('article button').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const actionName = button.innerText.trim();
+      const caseId = button.closest('article').querySelector('.font-headline-sm').innerText.trim();
+      
+      // Gentle feedback trigger
+      button.classList.add('opacity-75');
+      setTimeout(() => button.classList.remove('opacity-75'), 180);
+    });
+  });
+</script></main><nav class="fixed bottom-0 inset-x-0 z-40 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-secondary font-semibold"><div class="flex items-center justify-around h-16 px-space-xs max-w-lg mx-auto relative"><a aria-current="page" class="flex flex-col items-center justify-center flex-1 h-14 transition-colors gap-0.5 text-secondary font-semibold" data-path="overview" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm">Overview</span></a><a class="flex flex-col items-center justify-center flex-1 h-14 text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="patient-cases" href="#"><span class="material-symbols-outlined text-[22px]">folder_shared</span><span class="font-label-sm text-label-sm">Cases</span></a><div class="flex items-center justify-center flex-1 -mt-5"><a aria-label="New Assessment" class="w-13 h-13 p-3 rounded-full bg-secondary text-on-secondary shadow-[0_4px_12px_rgba(0,106,99,0.35)] flex items-center justify-center hover:opacity-95 active:scale-95 transition-all" data-path="new-risk-assessment" href="#"><span class="material-symbols-outlined text-[26px]">add</span></a></div><a class="flex flex-col items-center justify-center flex-1 h-14 text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="prediction-history" href="#"><span class="material-symbols-outlined text-[22px]">history</span><span class="font-label-sm text-label-sm">History</span></a><button aria-label="Open Menu" class="flex flex-col items-center justify-center flex-1 h-14 text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" onclick="document.getElementById('clinical-drawer').classList.remove('-translate-x-full');document.getElementById('drawer-backdrop').classList.remove('opacity-0','pointer-events-none');" type="button"><span class="material-symbols-outlined text-[22px]">menu</span><span class="font-label-sm text-label-sm">Menu</span></button></div></nav><div class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 transition-opacity duration-300 opacity-0 pointer-events-none" id="drawer-backdrop" onclick="document.getElementById('clinical-drawer').classList.add('-translate-x-full');this.classList.add('opacity-0','pointer-events-none');"></div><aside class="fixed top-0 bottom-0 left-0 w-80 max-w-[85vw] bg-surface-container-lowest z-50 transform -translate-x-full flex flex-col shadow-[4px_0_24px_rgba(0,0,0,0.12)] pt-safe pb-safe" id="clinical-drawer"><div class="p-space-lg bg-surface-container-low"><div class="flex items-center justify-between mb-space-md"><div class="flex items-center gap-space-xs"><img alt="OSMF-RiskAI Emblem" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wcwp-177wlCQjZhn0eSfCfE6ZrirjeOr2hWf_7VVEjS8GEBP7wJF_r31CLVPCQkUPqcPB7ducIs4_UTGD1YT3yDAvCPuyVXD1dtqdLDu8Yw993cSZReMZaVVXWkqOAlpsT795nIZoa6xZ667cbG6C0-kQ1beth-ko6z5J12IZ3DVicayKdj5E8j4zWzIyk1mnjJe4iqHlc6N3fEdZ0wTWy2ZnuL4lzpDgWVPeIbYnYOujr2aT1-ymd47A"/><span class="font-headline-sm text-headline-sm text-primary">OSMF-RiskAI</span></div><button class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface rounded-lg" onclick="document.getElementById('clinical-drawer').classList.add('-translate-x-full');document.getElementById('drawer-backdrop').classList.add('opacity-0','pointer-events-none');"><span class="material-symbols-outlined">close</span></button></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-11 h-11 rounded-full object-cover ring-2 ring-secondary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6mrZmy6VwUbBRLWKKHSrsFjctqIpuI0JWNxHCmAvDbjAddOA2hsRaJKrX7P8VNLwa31XZWji1ygHkzxl6aCAnphAVb-_P6BHkPt_RUlESszMwH_K047dB3KPBMPP-2oTOgCXDgjVfWpd0M-Ud-GgJG_vpkTEwFFYVMYPXaz1HVZp5UQpfLtmI8i64SH-fFSilTmrUNHdNYmeJy7X869F6nwQB8q04bNNusys6rYKYTf1Sf5UW5Lnt"/><div class="min-w-0"><h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Dr. Sarah Jensen</h3><p class="font-body-sm text-body-sm text-on-surface-variant truncate">Oral Medicine Specialist</p><p class="font-label-sm text-label-sm text-secondary font-medium mt-0.5">Oncology Researcher</p></div></div></div><div class="flex-1 overflow-y-auto px-space-md py-space-sm space-y-space-md"><div class="space-y-1"><p class="px-space-sm py-1 font-label-sm text-label-sm text-outline uppercase tracking-wider">Clinical Operations</p><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">dashboard</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="patient-cases" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">folder_shared</span><span class="font-body-md text-body-md">Patient Cases</span></a><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="new-risk-assessment" href="#"><span class="material-symbols-outlined text-[20px] text-secondary">assignment_add</span><span class="font-body-md text-body-md">New Risk Assessment</span></a><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="prediction-history" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">history</span><span class="font-body-md text-body-md">Prediction History</span></a><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="follow-up-tracking" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">calendar_month</span><span class="font-body-md text-body-md">Follow-up Tracking</span></a><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="research-analytics" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">analytics</span><span class="font-body-md text-body-md">Research Analytics</span></a></div><div class="space-y-1"><p class="px-space-sm py-1 font-label-sm text-label-sm text-outline uppercase tracking-wider">Governance &amp; Setup</p><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="model-registry" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">model_training</span><span class="font-body-md text-body-md">Model Registry</span></a><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">description</span><span class="font-body-md text-body-md">Reports</span></a><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">verified_user</span><span class="font-body-md text-body-md">Audit Logs</span></a><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">settings</span><span class="font-body-md text-body-md">Settings</span></a></div></div><div class="p-space-md bg-surface-container-low space-y-space-sm"><div class="p-space-sm bg-surface-container-lowest rounded-lg border-l-2 border-primary"><p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Investigational Use: Multimodal decision-support aid. Not for standalone clinical diagnosis.</p></div><button class="w-full h-11 flex items-center justify-center gap-space-xs text-error font-body-md text-body-md rounded-lg hover:bg-error-container/40 transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">logout</span><span>Sign Out</span></button></div></aside></body></html>

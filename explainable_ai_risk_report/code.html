@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>OSMF-RiskAI</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;min-height:100%;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#f8f9ff","inverse-on-surface":"#eaf1ff","on-tertiary":"#ffffff","surface-variant":"#d3e4fe","tertiary-container":"#003731","surface-container-high":"#dce9ff","on-secondary-container":"#006f67","on-tertiary-fixed-variant":"#005048","surface-dim":"#cbdbf5","primary-container":"#17324d","on-error":"#ffffff","inverse-surface":"#213145","background":"#f8f9ff","tertiary":"#00201c","surface-container-lowest":"#ffffff","inverse-primary":"#afc9ea","error-container":"#ffdad6","surface-container-highest":"#d3e4fe","primary-fixed":"#d1e4ff","outline-variant":"#c3c6ce","surface-tint":"#47607e","on-primary-fixed-variant":"#2f4865","secondary-fixed":"#9cf2e8","on-surface-variant":"#43474d","secondary-container":"#99efe5","surface-container-low":"#eff4ff","on-primary":"#ffffff","secondary-fixed-dim":"#80d5cb","surface-container":"#e5eeff","on-tertiary-fixed":"#00201c","on-secondary":"#ffffff","primary":"#001d36","tertiary-fixed":"#71f8e4","on-primary-fixed":"#001d36","outline":"#74777e","primary-fixed-dim":"#afc9ea","error":"#ba1a1a","on-primary-container":"#819aba","tertiary-fixed-dim":"#4fdbc8","on-secondary-fixed-variant":"#00504a","surface-bright":"#f8f9ff","on-error-container":"#93000a","secondary":"#006a63","on-surface":"#0b1c30","on-tertiary-container":"#00ab9a","on-background":"#0b1c30","on-secondary-fixed":"#00201d"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-sm":"1rem","space-lg":"1.5rem","space-xl":"2rem","gutter-sm":"1rem","space-sm":"0.5rem","margin":"2rem","space-md":"1rem","space-xs":"0.25rem","gutter":"1.5rem"},"fontFamily":{"body-lg":["Inter"],"headline-lg":["Inter"],"label-sm":["Inter"],"metric-stat":["Inter"],"label-md":["Inter"],"headline-md":["Inter"],"headline-sm":["Inter"],"display-lg":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"headline-lg-mobile":["Inter"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"metric-stat":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-full antialiased"><header class="fixed top-0 inset-x-0 z-40 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-sm flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0 flex-1"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><img alt="OSMF-RiskAI Emblem" class="h-7 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1Wcwp-177wlCQjZhn0eSfCfE6ZrirjeOr2hWf_7VVEjS8GEBP7wJF_r31CLVPCQkUPqcPB7ducIs4_UTGD1YT3yDAvCPuyVXD1dtqdLDu8Yw993cSZReMZaVVXWkqOAlpsT795nIZoa6xZ667cbG6C0-kQ1beth-ko6z5J12IZ3DVicayKdj5E8j4zWzIyk1mnjJe4iqHlc6N3fEdZ0wTWy2ZnuL4lzpDgWVPeIbYnYOujr2aT1-ymd47A"/><h1 class="font-headline-sm text-headline-sm text-primary tracking-tight truncate">New Risk Assessment</h1></div><div class="flex items-center gap-space-xs flex-shrink-0"><span class="hidden sm:inline bg-surface-container text-on-surface-variant text-label-sm font-label-sm px-2 py-0.5 rounded-full">Decision Support</span><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6mrZmy6VwUbBRLWKKHSrsFjctqIpuI0JWNxHCmAvDbjAddOA2hsRaJKrX7P8VNLwa31XZWji1ygHkzxl6aCAnphAVb-_P6BHkPt_RUlESszMwH_K047dB3KPBMPP-2oTOgCXDgjVfWpd0M-Ud-GgJG_vpkTEwFFYVMYPXaz1HVZp5UQpfLtmI8i64SH-fFSilTmrUNHdNYmeJy7X869F6nwQB8q04bNNusys6rYKYTf1Sf5UW5Lnt"/></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-8">
+<!-- Mandatory Prominent Prototype Safety Banner -->
+<div class="mx-margin-sm mt-3 p-space-md rounded-xl bg-error-container text-on-error-container shadow-sm flex flex-col gap-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="font-headline-sm text-headline-sm text-error tracking-tight">DEMO MODE — MODEL NOT CLINICALLY VALIDATED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-error-container opacity-90 leading-snug">
+      No validated prediction is available. Connect a trained model and verify its evaluation and calibration before displaying patient-specific risk estimates.
+    </p>
+</div>
+<!-- Study Metadata & Clinical Action Controls -->
+<div class="mx-margin-sm mt-3 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">OSMF-0042</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Pseudonymous</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Today, 14:32 IST <span class="text-outline-variant font-semibold">•</span> Visit #3</p>
+<div class="inline-flex items-center gap-1.5 mt-1.5 px-2 py-0.5 rounded-md bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-[14px]">neurology</span>
+<span class="font-label-sm text-label-sm tracking-tight">Model: v1.4.2-b0-latefuse (PyTorch)</span>
+</div>
+</div>
+<span class="w-3 h-3 rounded-full bg-secondary-container flex items-center justify-center animate-pulse" title="Engine Connected">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</span>
+</div>
+<!-- Quick Actions (Export / Print / View Case) -->
+<div class="grid grid-cols-3 gap-2 pt-1">
+<button class="h-10 px-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-1.5 transition-colors text-label-md font-label-md active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Export PDF</span>
+</button>
+<button class="h-10 px-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center gap-1.5 transition-colors text-label-md font-label-md active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Print</span>
+</button>
+<button class="h-10 px-2 rounded-lg bg-primary-container text-surface-bright flex items-center justify-center gap-1.5 hover:bg-primary transition-colors text-label-md font-label-md active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]">folder_open</span>
+<span>View Case</span>
+</button>
+</div>
+</div>
+<!-- Multimodal Risk Estimation Card -->
+<div class="mx-margin-sm mt-3 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant font-bold">Risk Stratification Summary</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-error font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+        Tier 3 / High
+      </span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-bold tracking-tight">Elevated Risk Stratum</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Target Horizon: 3-Year Malignant Transformation</p>
+</div>
+<!-- Metric Stat Display -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Predicted Risk Index</span>
+<span class="font-metric-stat text-metric-stat text-error tracking-tight font-bold">0.74</span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">95% Confidence Interval</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">0.68 – 0.79</span>
+</div>
+</div>
+<!-- Probability Gauge Bar -->
+<div class="w-full bg-surface-container rounded-full h-2.5 overflow-hidden relative mt-1">
+<div class="absolute left-0 top-0 bottom-0 bg-secondary rounded-full" style="width: 35%"></div>
+<div class="absolute left-[35%] top-0 bottom-0 bg-amber-400" style="width: 25%"></div>
+<div class="absolute left-[60%] top-0 bottom-0 bg-error" style="width: 40%"></div>
+<!-- Marker needle -->
+<div class="absolute top-0 bottom-0 w-1.5 bg-primary rounded-full shadow" style="left: 74%; transform: translateX(-50%);"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant px-0.5">
+<span>Low (0.00)</span>
+<span>Moderate (0.35)</span>
+<span>Elevated (0.60+)</span>
+</div>
+</div>
+<!-- Secondary Calibration Stat -->
+<div class="flex items-center justify-between px-space-sm py-2 rounded-lg bg-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">tune</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Model Calibration (Brier Score)</span>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">0.12</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant leading-none">Awaiting prospective validation</span>
+</div>
+</div>
+</div>
+<!-- Visual Explainability: Grad-CAM Section -->
+<div class="mx-margin-sm mt-3 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Visual Explanation — Grad-CAM</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Right buccal mucosa fibrous band localization</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">visibility</span>
+</div>
+<!-- Toggle Controls -->
+<div class="p-1 rounded-lg bg-surface-container flex items-center gap-1 text-center font-label-md text-label-md">
+<button class="flex-1 py-1.5 rounded-md bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all" id="btn-toggle-cam" onclick="setCamView('overlay')">
+        Heatmap Overlay
+      </button>
+<button class="flex-1 py-1.5 rounded-md text-on-surface-variant hover:text-primary transition-all" id="btn-toggle-orig" onclick="setCamView('original')">
+        Original Photo
+      </button>
+</div>
+<!-- Interactive Canvas Simulation Container -->
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container-high shadow-inner">
+<!-- Original Oral Tissue Image -->
+<img class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300" data-alt="Clinical close-up macroscopic medical photograph of oral cavity interior focusing on right buccal mucosa tissue with visible paleness and blanching indicative of oral submucous fibrosis, well illuminated with balanced clinical diagnostic lighting." id="cam-orig" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBInh8wwo1dFoSGdT7EsnN7meGFr-3BN8adE96esrGU0W5x2ItK85_VzFUDaCnvb-rbtHj9xfAOLpd96zSvCIUFtIKZtoAFTlAHfkP0DZVwPMf2ZPMUWgbq9zMjg0rIfzLZlvqxqPxBvbmLEt6Lv5eH8V9mqirvIPiyiPQPIRlCFf0dFvfG1hCh57U8ZHSl69b2ndvDuFItTd6qSuqpSEOPfF3nqBEFgwvXtGX1F90_5VVrvu23mNXh"/>
+<!-- Heatmap Thermal Simulation Overlay -->
+<div class="absolute inset-0 pointer-events-none mix-blend-multiply opacity-90 transition-opacity duration-300 bg-gradient-to-tr from-blue-700/40 via-yellow-400/50 to-red-600/80" id="cam-overlay">
+<div class="absolute right-12 top-10 w-28 h-28 rounded-full bg-red-600/70 blur-xl"></div>
+<div class="absolute right-16 top-14 w-16 h-16 rounded-full bg-amber-400/80 blur-md"></div>
+</div>
+<!-- Attention Focus Coordinate Annotation Pin -->
+<div class="absolute right-16 top-16 -translate-x-1/2 -translate-y-1/2 pointer-events-none flex flex-col items-center" id="cam-pin">
+<span class="w-6 h-6 rounded-full bg-error text-white flex items-center justify-center shadow-lg ring-2 ring-surface-container-lowest animate-bounce">
+<span class="material-symbols-outlined text-[14px]">priority_high</span>
+</span>
+<span class="mt-1 px-2 py-0.5 rounded bg-primary/90 text-surface-bright font-label-sm text-label-sm shadow backdrop-blur-sm">
+          Salient Band (+0.42)
+        </span>
+</div>
+<div class="absolute bottom-2 left-2 px-2 py-1 rounded bg-inverse-surface/80 backdrop-blur-sm text-surface-bright font-label-sm text-label-sm">
+        ResNet50-Layer4 Target
+      </div>
+</div>
+<!-- Grad-CAM Intensity Colorbar Legend -->
+<div class="p-2 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex justify-between items-center font-label-sm text-label-sm text-on-surface-variant">
+<span>Heatmap Colorbar Intensity</span>
+<span class="font-bold text-primary">Activation Scale</span>
+</div>
+<div class="w-full h-2 rounded-full bg-gradient-to-r from-blue-600 via-yellow-400 to-red-600 shadow-sm"></div>
+<div class="flex justify-between items-center font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-blue-600"></span>Low</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-yellow-400"></span>Medium</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-red-600"></span>High Activation</span>
+</div>
+</div>
+<!-- Clarifying Regulatory Text -->
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+      The heatmap highlights image regions that influenced the model output. It does not establish causation or independently confirm a clinical diagnosis.
+    </p>
+</div>
+<!-- Clinical Feature Contributions — SHAP -->
+<div class="mx-margin-sm mt-3 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Clinical Feature Contributions — SHAP</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Additive local attribution impact on risk probability</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">bar_chart</span>
+</div>
+<!-- SHAP Explanatory Subtitle Pill -->
+<div class="px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm flex items-center justify-between">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+        Decreases Risk (-)
+      </span>
+<span class="font-bold text-on-surface">Base Value: E[f(x)] = 0.32</span>
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+        Increases Risk (+)
+      </span>
+</div>
+<!-- Diverging Horizontal Bar Chart Section -->
+<div class="flex flex-col gap-2.5 pt-1">
+<!-- Feature 1: Areca nut -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-primary font-semibold">Areca nut duration (12 yrs)</span>
+<span class="text-error font-bold">+0.28</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container flex overflow-hidden">
+<div class="w-1/2 h-full"></div>
+<div class="h-full bg-error rounded-r-full" style="width: 44%;"></div>
+</div>
+</div>
+<!-- Feature 2: Reduced mouth opening -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-primary font-semibold">Reduced mouth opening (21mm)</span>
+<span class="text-error font-bold">+0.22</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container flex overflow-hidden">
+<div class="w-1/2 h-full"></div>
+<div class="h-full bg-error rounded-r-full" style="width: 36%;"></div>
+</div>
+</div>
+<!-- Feature 3: Clinical Stage III -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-primary font-semibold">Clinical Stage III</span>
+<span class="text-amber-600 font-bold">+0.18</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container flex overflow-hidden">
+<div class="w-1/2 h-full"></div>
+<div class="h-full bg-amber-500 rounded-r-full" style="width: 29%;"></div>
+</div>
+</div>
+<!-- Feature 4: Persistent ulceration -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-primary font-semibold">Persistent ulceration</span>
+<span class="text-amber-600 font-bold">+0.11</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container flex overflow-hidden">
+<div class="w-1/2 h-full"></div>
+<div class="h-full bg-amber-400 rounded-r-full" style="width: 18%;"></div>
+</div>
+</div>
+<!-- Feature 5: Age (48y) -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-primary font-semibold">Age (48y)</span>
+<span class="text-on-surface-variant font-bold">+0.05</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container flex overflow-hidden">
+<div class="w-1/2 h-full"></div>
+<div class="h-full bg-surface-tint rounded-r-full" style="width: 9%;"></div>
+</div>
+</div>
+<!-- Feature 6: Non-smoking habit -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-secondary font-semibold">Non-smoking habit</span>
+<span class="text-secondary font-bold">-0.09</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container flex flex-row-reverse overflow-hidden">
+<div class="w-1/2 h-full"></div>
+<div class="h-full bg-secondary rounded-l-full" style="width: 15%;"></div>
+</div>
+</div>
+<!-- Feature 7: Non-alcohol habit -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-secondary font-semibold">Non-alcohol habit</span>
+<span class="text-secondary font-bold">-0.06</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container flex flex-row-reverse overflow-hidden">
+<div class="w-1/2 h-full"></div>
+<div class="h-full bg-secondary rounded-l-full" style="width: 10%;"></div>
+</div>
+</div>
+</div>
+<div class="pt-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Bars indicate directional SHAP score pushing risk higher (+) or lower (-) relative to the baseline training population.
+      </p>
+</div>
+</div>
+<!-- Input Quality & Missing Data Summary -->
+<div class="mx-margin-sm mt-3 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Data Provenance &amp; Quality Gates</span>
+<div class="grid grid-cols-2 gap-2">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Image Quality</span>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Accepted</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Laplacian: 142.8 (&gt;80 threshold)</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Missing Clinical Fields</span>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">0 / 14</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Complete multimodal dataset</span>
+</div>
+</div>
+</div>
+<!-- Mandatory Final Clinical Safety Disclaimer -->
+<div class="mx-margin-sm mt-4 p-space-md rounded-xl bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[20px] text-primary flex-shrink-0 mt-0.5">verified_user</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+      OSMF-RiskAI is a research prototype for clinician decision support. Its outputs are not a definitive diagnosis and must not replace clinical examination, histopathology or specialist judgment.
+    </p>
+</div>
+</div>
+<script>
+  function setCamView(mode) {
+    const overlay = document.getElementById('cam-overlay');
+    const pin = document.getElementById('cam-pin');
+    const btnCam = document.getElementById('btn-toggle-cam');
+    const btnOrig = document.getElementById('btn-toggle-orig');
+
+    if (!overlay || !pin || !btnCam || !btnOrig) return;
+
+    if (mode === 'original') {
+      overlay.style.opacity = '0';
+      pin.style.opacity = '0';
+      btnOrig.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      btnOrig.classList.remove('text-on-surface-variant');
+      btnCam.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      btnCam.classList.add('text-on-surface-variant');
+    } else {
+      overlay.style.opacity = '0.9';
+      pin.style.opacity = '1';
+      btnCam.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      btnCam.classList.remove('text-on-surface-variant');
+      btnOrig.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      btnOrig.classList.add('text-on-surface-variant');
+    }
+  }
+</script></main></body></html>

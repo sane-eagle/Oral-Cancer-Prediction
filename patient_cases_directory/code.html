@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>OSMF-RiskAI</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;min-height:100%;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}#clinical-drawer{transition:transform 0.3s cubic-bezier(0.16,1,0.3,1),visibility 0.3s;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#f8f9ff","inverse-on-surface":"#eaf1ff","on-tertiary":"#ffffff","surface-variant":"#d3e4fe","tertiary-container":"#003731","surface-container-high":"#dce9ff","on-secondary-container":"#006f67","on-tertiary-fixed-variant":"#005048","surface-dim":"#cbdbf5","primary-container":"#17324d","on-error":"#ffffff","inverse-surface":"#213145","background":"#f8f9ff","tertiary":"#00201c","surface-container-lowest":"#ffffff","inverse-primary":"#afc9ea","error-container":"#ffdad6","surface-container-highest":"#d3e4fe","primary-fixed":"#d1e4ff","outline-variant":"#c3c6ce","surface-tint":"#47607e","on-primary-fixed-variant":"#2f4865","secondary-fixed":"#9cf2e8","on-surface-variant":"#43474d","secondary-container":"#99efe5","surface-container-low":"#eff4ff","on-primary":"#ffffff","secondary-fixed-dim":"#80d5cb","surface-container":"#e5eeff","on-tertiary-fixed":"#00201c","on-secondary":"#ffffff","primary":"#001d36","tertiary-fixed":"#71f8e4","on-primary-fixed":"#001d36","outline":"#74777e","primary-fixed-dim":"#afc9ea","error":"#ba1a1a","on-primary-container":"#819aba","tertiary-fixed-dim":"#4fdbc8","on-secondary-fixed-variant":"#00504a","surface-bright":"#f8f9ff","on-error-container":"#93000a","secondary":"#006a63","on-surface":"#0b1c30","on-tertiary-container":"#00ab9a","on-background":"#0b1c30","on-secondary-fixed":"#00201d"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-sm":"1rem","space-lg":"1.5rem","space-xl":"2rem","gutter-sm":"1rem","space-sm":"0.5rem","margin":"2rem","space-md":"1rem","space-xs":"0.25rem","gutter":"1.5rem"},"fontFamily":{"body-lg":["Inter"],"headline-lg":["Inter"],"label-sm":["Inter"],"metric-stat":["Inter"],"label-md":["Inter"],"headline-md":["Inter"],"headline-sm":["Inter"],"display-lg":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"headline-lg-mobile":["Inter"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"metric-stat":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-full antialiased"><header class="fixed top-0 inset-x-0 z-40 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="OSMF-RiskAI Emblem" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1Wcwp-177wlCQjZhn0eSfCfE6ZrirjeOr2hWf_7VVEjS8GEBP7wJF_r31CLVPCQkUPqcPB7ducIs4_UTGD1YT3yDAvCPuyVXD1dtqdLDu8Yw993cSZReMZaVVXWkqOAlpsT795nIZoa6xZ667cbG6C0-kQ1beth-ko6z5J12IZ3DVicayKdj5E8j4zWzIyk1mnjJe4iqHlc6N3fEdZ0wTWy2ZnuL4lzpDgWVPeIbYnYOujr2aT1-ymd47A"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary tracking-tight truncate">OSMF-RiskAI</span><span class="bg-secondary-container/60 text-on-secondary-container text-label-sm font-label-sm px-1.5 py-0.5 rounded-full whitespace-nowrap">Research</span></div><span class="text-label-sm font-label-sm text-on-surface-variant truncate">Clinical Intelligence</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><button aria-label="Clinician Profile and Drawer" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors" onclick="document.getElementById('clinical-drawer').classList.remove('-translate-x-full');document.getElementById('drawer-backdrop').classList.remove('opacity-0','pointer-events-none');" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6mrZmy6VwUbBRLWKKHSrsFjctqIpuI0JWNxHCmAvDbjAddOA2hsRaJKrX7P8VNLwa31XZWji1ygHkzxl6aCAnphAVb-_P6BHkPt_RUlESszMwH_K047dB3KPBMPP-2oTOgCXDgjVfWpd0M-Ud-GgJG_vpkTEwFFYVMYPXaz1HVZp5UQpfLtmI8i64SH-fFSilTmrUNHdNYmeJy7X869F6nwQB8q04bNNusys6rYKYTf1Sf5UW5Lnt"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full pb-8">
+<!-- Research Banner Notice -->
+<div class="px-margin-sm pt-space-sm pb-space-xs">
+<div class="bg-surface-container-low px-space-md py-space-sm rounded-xl shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px] flex-shrink-0">verified_user</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Institutional Cohort: <span class="text-primary font-semibold">Cohort-Alpha-24</span></p>
+</div>
+<span class="bg-surface-container-highest text-on-surface text-label-sm font-label-sm px-2 py-0.5 rounded-full flex-shrink-0">142 Active</span>
+</div>
+</div>
+<!-- Page Header & Action -->
+<section class="px-margin-sm pt-space-xs pb-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="min-w-0">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Patient Cases</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Manage pseudonymized research cases and clinical assessments.</p>
+</div>
+<button class="flex-shrink-0 flex items-center gap-1.5 bg-primary text-on-primary hover:bg-primary-container px-3.5 py-2.5 rounded-xl shadow-md active:scale-95 transition-all" id="open-create-btn" onclick="document.getElementById('case-modal').classList.remove('hidden'); document.getElementById('case-modal-backdrop').classList.remove('opacity-0', 'pointer-events-none');" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="font-label-md text-label-md font-semibold whitespace-nowrap">+ Create New Case</span>
+</button>
+</div>
+</section>
+<!-- Search & Filter Controls -->
+<section class="px-margin-sm py-space-xs space-y-space-sm">
+<!-- Search Bar -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md font-body-md pl-10 pr-10 py-2.5 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary/40 transition-all" id="case-search-input" placeholder="Search by Study ID (e.g. OSMF-0042)..." type="text"/>
+<div class="absolute inset-y-0 right-3 flex items-center text-outline-variant">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</div>
+</div>
+<!-- Filter Pills (Scrollable) -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none -mx-margin-sm px-margin-sm">
+<button class="filter-pill bg-primary text-on-primary font-label-sm text-label-sm px-3 py-1.5 rounded-full whitespace-nowrap shadow-sm transition-all" data-filter="all">All Cases (142)</button>
+<button class="filter-pill bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm px-3 py-1.5 rounded-full whitespace-nowrap shadow-sm transition-all" data-filter="stage1">Stage I (28)</button>
+<button class="filter-pill bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm px-3 py-1.5 rounded-full whitespace-nowrap shadow-sm transition-all" data-filter="stage2">Stage II (44)</button>
+<button class="filter-pill bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm px-3 py-1.5 rounded-full whitespace-nowrap shadow-sm transition-all" data-filter="stage3">Stage III (52)</button>
+<button class="filter-pill bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm px-3 py-1.5 rounded-full whitespace-nowrap shadow-sm transition-all" data-filter="stage4">Stage IV (18)</button>
+<button class="filter-pill bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm px-3 py-1.5 rounded-full whitespace-nowrap shadow-sm transition-all" data-filter="followup">Follow-up Due (14)</button>
+</div>
+<!-- Sub-bar: Sort Dropdown & Quick Stats -->
+<div class="flex items-center justify-between text-on-surface-variant pt-0.5">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span>
+<label class="sr-only" for="sort-select">Sort cases</label>
+<select class="bg-transparent text-label-md font-label-md text-on-surface font-medium focus:outline-none cursor-pointer" id="sort-select">
+<option>Sort: Recently Updated</option>
+<option>Sort: Stage (Severe first)</option>
+<option>Sort: Mouth Opening (Min first)</option>
+<option>Sort: Study ID (Ascending)</option>
+</select>
+</div>
+<div class="flex items-center gap-1 text-label-sm font-label-sm text-outline">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Live Synced</span>
+</div>
+</div>
+</section>
+<!-- Patient Cards Stack -->
+<section class="px-margin-sm py-space-xs space-y-space-md">
+<!-- Card 1: OSMF-0042 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md space-y-space-sm transition-all hover:shadow-md">
+<!-- Top header with Study ID, Risk Badge, and Status Badges -->
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-headline-sm text-headline-sm">
+            42
+          </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">OSMF-0042</h2>
+<span class="material-symbols-outlined text-[16px] text-secondary" title="Biopsy Verified">verified</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Registered: Aug 14, 2024</p>
+</div>
+</div>
+<!-- Status badging -->
+<div class="flex flex-col items-end gap-1">
+<span class="bg-surface-container-high text-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold">Stage III</span>
+<span class="bg-[#FFFBEB] text-[#D97706] font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">schedule</span> Follow-up Due
+          </span>
+</div>
+</div>
+<!-- Clinical & Habit Details Grid -->
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-space-sm rounded-lg text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">person</span>
+<span class="font-body-sm text-body-sm truncate">Age: <strong class="font-medium text-primary">48y</strong> | Sex: <strong class="font-medium text-primary">M</strong></span>
+</div>
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">straighten</span>
+<span class="font-body-sm text-body-sm truncate">Mouth Open: <strong class="font-medium text-error">21 mm</strong></span>
+</div>
+<div class="flex items-center gap-2 min-w-0 col-span-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">smoking_rooms</span>
+<span class="font-body-sm text-body-sm truncate">Habit: <strong class="font-medium text-primary">Areca Nut</strong> (12y duration, 6/day)</span>
+</div>
+<div class="flex items-center gap-2 min-w-0 col-span-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span class="font-body-sm text-body-sm">Last Visit: <span class="text-on-surface font-medium">2 days ago</span> • Histology Verified</span>
+</div>
+</div>
+<!-- Quality & Provenance tag -->
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-1.5">
+<span class="bg-secondary-container/50 text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Image: Accepted
+          </span>
+<span class="font-label-sm text-label-sm text-outline">Q-Score: 98%</span>
+</div>
+<span class="text-label-sm font-label-sm text-secondary font-medium">Risk: High (78%)</span>
+</div>
+<!-- Card Action Buttons -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md py-2.5 rounded-lg font-semibold flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Case</span>
+</button>
+<button class="flex-1 bg-secondary text-on-secondary hover:bg-on-secondary-container font-label-md text-label-md py-2.5 rounded-lg font-semibold flex items-center justify-center gap-1 shadow-sm active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">assignment_turned_in</span>
+<span>New Assessment</span>
+</button>
+</div>
+</article>
+<!-- Card 2: OSMF-0041 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md space-y-space-sm transition-all hover:shadow-md">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-headline-sm text-headline-sm">
+            41
+          </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">OSMF-0041</h2>
+<span class="bg-secondary-container/40 text-on-secondary-container text-label-sm font-label-sm px-1.5 rounded">New Intake</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Registered: Oct 19, 2024</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="bg-surface-container-high text-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold">Stage I</span>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">pending_actions</span> Pending Review
+          </span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-space-sm rounded-lg text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">person</span>
+<span class="font-body-sm text-body-sm truncate">Age: <strong class="font-medium text-primary">35y</strong> | Sex: <strong class="font-medium text-primary">F</strong></span>
+</div>
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">straighten</span>
+<span class="font-body-sm text-body-sm truncate">Mouth Open: <strong class="font-medium text-primary">36 mm</strong></span>
+</div>
+<div class="flex items-center gap-2 min-w-0 col-span-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">smoking_rooms</span>
+<span class="font-body-sm text-body-sm truncate">Habit: <strong class="font-medium text-primary">Pan Masala</strong> (4y duration, 2/day)</span>
+</div>
+<div class="flex items-center gap-2 min-w-0 col-span-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span class="font-body-sm text-body-sm">Last Visit: <span class="text-on-surface font-medium">Oct 20, 2024</span> • Initial Baseline</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-1.5">
+<span class="bg-secondary-container/50 text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Image: Accepted
+          </span>
+<span class="font-label-sm text-label-sm text-outline">Q-Score: 92%</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Risk: Pending AI Run</span>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md py-2.5 rounded-lg font-semibold flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Case</span>
+</button>
+<button class="flex-1 bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md py-2.5 rounded-lg font-semibold flex items-center justify-center gap-1 shadow-sm active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+<span>Assess Now</span>
+</button>
+</div>
+</article>
+<!-- Card 3: OSMF-0040 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md space-y-space-sm transition-all hover:shadow-md">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-headline-sm text-headline-sm">
+            40
+          </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">OSMF-0040</h2>
+<span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Registered: Sep 02, 2024</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="bg-surface-container-high text-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold">Stage II</span>
+<span class="bg-[#F0FDF4] text-[#15803D] font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-[12px]">done_all</span> Completed
+          </span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-space-sm rounded-lg text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">person</span>
+<span class="font-body-sm text-body-sm truncate">Age: <strong class="font-medium text-primary">41y</strong> | Sex: <strong class="font-medium text-primary">M</strong></span>
+</div>
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">straighten</span>
+<span class="font-body-sm text-body-sm truncate">Mouth Open: <strong class="font-medium text-primary">28 mm</strong></span>
+</div>
+<div class="flex items-center gap-2 min-w-0 col-span-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">smoking_rooms</span>
+<span class="font-body-sm text-body-sm truncate">Habit: <strong class="font-medium text-primary">Betel Quid + Tobacco</strong> (8y)</span>
+</div>
+<div class="flex items-center gap-2 min-w-0 col-span-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span class="font-body-sm text-body-sm">Last Visit: <span class="text-on-surface font-medium">Oct 18, 2024</span> • Panel Signed</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-1.5">
+<span class="bg-secondary-container/50 text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Image: Accepted
+          </span>
+<span class="font-label-sm text-label-sm text-outline">Q-Score: 95%</span>
+</div>
+<span class="text-label-sm font-label-sm text-secondary font-medium">Risk: Moderate (42%)</span>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 bg-surface-container-high hover:bg-surface-variant text-primary font-label-md text-label-md py-2.5 rounded-lg font-semibold flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span>View Report</span>
+</button>
+<button class="flex-1 bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md py-2.5 rounded-lg font-semibold flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Case</span>
+</button>
+</div>
+</article>
+<!-- Card 4: OSMF-0039 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md space-y-space-sm transition-all hover:shadow-md">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-error-container text-on-error-container flex items-center justify-center font-headline-sm text-headline-sm font-bold">
+            39
+          </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">OSMF-0039</h2>
+<span class="material-symbols-outlined text-[16px] text-error">priority_high</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Registered: Aug 01, 2024</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="bg-surface-container-high text-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-semibold">Stage IV</span>
+<span class="bg-[#FEF2F2] text-[#B91C1C] font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[12px]">warning</span> Needs Review
+          </span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 bg-surface-container-low p-space-sm rounded-lg text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">person</span>
+<span class="font-body-sm text-body-sm truncate">Age: <strong class="font-medium text-primary">52y</strong> | Sex: <strong class="font-medium text-primary">M</strong></span>
+</div>
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-error">straighten</span>
+<span class="font-body-sm text-body-sm truncate">Mouth Open: <strong class="font-medium text-error">16 mm</strong></span>
+</div>
+<div class="flex items-center gap-2 min-w-0 col-span-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">smoking_rooms</span>
+<span class="font-body-sm text-body-sm truncate">Habit: <strong class="font-medium text-primary">Gutkha + Smoking</strong> (22y duration)</span>
+</div>
+<div class="flex items-center gap-2 min-w-0 col-span-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span class="font-body-sm text-body-sm">Last Visit: <span class="text-on-surface font-medium">Oct 12, 2024</span> • Severe Trismus</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-1.5">
+<span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[12px]">error</span> Image: Re-upload Req
+          </span>
+<span class="font-label-sm text-label-sm text-error">Blur Detected</span>
+</div>
+<span class="text-label-sm font-label-sm text-error font-semibold">Risk: Critical (89%)</span>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 bg-error text-on-error hover:opacity-90 font-label-md text-label-md py-2.5 rounded-lg font-semibold flex items-center justify-center gap-1 shadow-sm active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+<span>Resolve Image</span>
+</button>
+<button class="flex-1 bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md py-2.5 rounded-lg font-semibold flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Case</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Interactive Inline Quick Register Study Case Drawer / Card -->
+<section class="px-margin-sm pt-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-md space-y-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">Quick Register Study Case</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rapid intake for research participant</p>
+</div>
+</div>
+<span class="bg-surface-container text-primary font-mono font-label-sm text-label-sm px-2 py-1 rounded">Next: OSMF-0044</span>
+</div>
+<!-- Compact Form Grid -->
+<form class="space-y-space-sm" id="quick-case-form" onsubmit="event.preventDefault(); alert('Case OSMF-0044 registered successfully into Cohort Alpha.');">
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Study ID</label>
+<input class="w-full bg-surface-container-highest/60 text-primary font-mono font-body-sm text-body-sm px-3 py-2 rounded-lg cursor-not-allowed" readonly="" type="text" value="OSMF-0044"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Participant Age</label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-sm" max="100" min="18" placeholder="e.g. 45" required="" type="number"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Biological Sex</label>
+<select class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-sm cursor-pointer">
+<option value="M">Male (M)</option>
+<option value="F">Female (F)</option>
+<option value="O">Other / Unspecified</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Clinical Staging</label>
+<select class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-sm cursor-pointer">
+<option value="I">Stage I (Early Trismus)</option>
+<option selected="" value="II">Stage II (Moderate)</option>
+<option value="III">Stage III (Severe)</option>
+<option value="IV">Stage IV (Dysplastic / Advanced)</option>
+</select>
+</div>
+</div>
+<!-- Mouth opening quick slider indicator -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<label class="font-label-md text-label-md text-primary">Interincisal Distance (Mouth Opening)</label>
+<span class="font-mono text-label-md font-label-md text-secondary font-bold" id="range-val">25 mm</span>
+</div>
+<input class="w-full accent-secondary cursor-pointer" max="50" min="10" oninput="document.getElementById('range-val').innerText = this.value + ' mm';" type="range" value="25"/>
+<div class="flex justify-between text-label-sm font-label-sm text-outline mt-0.5">
+<span>Severe (&lt;20mm)</span>
+<span>Moderate (20-35mm)</span>
+<span>Normal (&gt;35mm)</span>
+</div>
+</div>
+<!-- Consent Checkbox -->
+<label class="flex items-start gap-2 pt-1 cursor-pointer select-none">
+<input checked="" class="mt-0.5 rounded accent-secondary" required="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">
+            Informed IRB Research Consent acquired &amp; signed. Direct biometric tags stripped.
+          </span>
+</label>
+<!-- Submit Button -->
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm py-2.5 rounded-lg flex items-center justify-center gap-2 shadow-md active:scale-[0.99] transition-all" type="submit">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>Register Case OSMF-0044</span>
+</button>
+</form>
+</div>
+</section>
+<!-- Ethical & Privacy Guardrail Footnote -->
+<section class="px-margin-sm pt-space-md">
+<div class="bg-surface-container-high/40 p-space-sm rounded-xl flex items-start gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px] flex-shrink-0 mt-0.5">shield</span>
+<p class="font-body-sm text-body-sm leading-relaxed">
+        All case data strictly pseudonymized for ethical research compliance. Direct identifiers excluded under IRB Protocol #OSMF-2024-C9.
+      </p>
+</div>
+</section>
+<!-- Create Case Modal (Overlaid when activated) -->
+<div class="fixed inset-0 bg-primary/50 backdrop-blur-sm z-50 transition-opacity duration-200 opacity-0 pointer-events-none" id="case-modal-backdrop" onclick="document.getElementById('case-modal').classList.add('hidden'); this.classList.add('opacity-0', 'pointer-events-none');"></div>
+<div class="hidden fixed bottom-0 inset-x-0 max-w-lg mx-auto bg-surface-container-lowest rounded-t-2xl shadow-2xl z-50 p-space-lg space-y-space-md max-h-[90vh] overflow-y-auto" id="case-modal">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[24px]">post_add</span>
+<h3 class="font-headline-md text-headline-md text-primary">New Research Study Case</h3>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('case-modal').classList.add('hidden'); document.getElementById('case-modal-backdrop').classList.add('opacity-0', 'pointer-events-none');" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+      Generate a pseudonymized case folder for oral mucosal clinical profiling and multimodal risk assessment.
+    </p>
+<div class="space-y-space-sm">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Study Case Identifier</label>
+<div class="flex items-center justify-between bg-surface-container px-3 py-2 rounded-lg">
+<span class="font-mono font-headline-sm text-headline-sm text-primary">OSMF-0044</span>
+<span class="text-label-sm font-label-sm text-secondary bg-secondary-container/60 px-2 py-0.5 rounded">Auto-Allocated</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Age of Subject</label>
+<input class="w-full bg-surface-container-low px-3 py-2 rounded-lg text-body-md font-body-md text-on-surface focus:outline-none" placeholder="Years" type="number"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Sex</label>
+<select class="w-full bg-surface-container-low px-3 py-2 rounded-lg text-body-md font-body-md text-on-surface focus:outline-none">
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Primary Clinical Staging</label>
+<div class="grid grid-cols-4 gap-1.5">
+<button class="py-2 text-center rounded-lg bg-surface-container hover:bg-surface-variant text-label-sm font-label-sm text-primary" type="button">Stg I</button>
+<button class="py-2 text-center rounded-lg bg-secondary text-on-secondary text-label-sm font-label-sm font-semibold" type="button">Stg II</button>
+<button class="py-2 text-center rounded-lg bg-surface-container hover:bg-surface-variant text-label-sm font-label-sm text-primary" type="button">Stg III</button>
+<button class="py-2 text-center rounded-lg bg-surface-container hover:bg-surface-variant text-label-sm font-label-sm text-primary" type="button">Stg IV</button>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="accent-secondary rounded" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">IRB Participant Consent signed and archived locally.</span>
+</label>
+</div>
+<div class="flex gap-2 pt-2">
+<button class="flex-1 bg-surface-container py-3 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface font-semibold" onclick="document.getElementById('case-modal').classList.add('hidden'); document.getElementById('case-modal-backdrop').classList.add('opacity-0', 'pointer-events-none');" type="button">
+          Cancel
+        </button>
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-xl font-label-md text-label-md font-semibold shadow-md active:scale-95 transition-all" onclick="document.getElementById('case-modal').classList.add('hidden'); document.getElementById('case-modal-backdrop').classList.add('opacity-0', 'pointer-events-none'); alert('Case OSMF-0044 created and ready for photo intake.');" type="button">
+          Confirm Case
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Filter button interactive styling
+  document.querySelectorAll('.filter-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-pill').forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary');
+        b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+      });
+      btn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+      btn.classList.add('bg-primary', 'text-on-primary');
+    });
+  });
+
+  // Simple client search simulation
+  const searchInput = document.getElementById('case-search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      document.querySelectorAll('article').forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (text.includes(q)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-40 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-secondary font-semibold"><div class="flex items-center justify-around h-16 px-space-xs max-w-lg mx-auto relative"><a class="flex flex-col items-center justify-center flex-1 h-14 text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="overview" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm">Overview</span></a><a aria-current="page" class="flex flex-col items-center justify-center flex-1 h-14 transition-colors gap-0.5 text-secondary font-semibold" data-path="patient-cases" href="#"><span class="material-symbols-outlined text-[22px]">folder_shared</span><span class="font-label-sm text-label-sm">Cases</span></a><div class="flex items-center justify-center flex-1 -mt-5"><a aria-label="New Assessment" class="w-13 h-13 p-3 rounded-full bg-secondary text-on-secondary shadow-[0_4px_12px_rgba(0,106,99,0.35)] flex items-center justify-center hover:opacity-95 active:scale-95 transition-all" data-path="new-risk-assessment" href="#"><span class="material-symbols-outlined text-[26px]">add</span></a></div><a class="flex flex-col items-center justify-center flex-1 h-14 text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" data-path="prediction-history" href="#"><span class="material-symbols-outlined text-[22px]">history</span><span class="font-label-sm text-label-sm">History</span></a><button aria-label="Open Menu" class="flex flex-col items-center justify-center flex-1 h-14 text-on-surface-variant hover:text-on-surface transition-colors gap-0.5" onclick="document.getElementById('clinical-drawer').classList.remove('-translate-x-full');document.getElementById('drawer-backdrop').classList.remove('opacity-0','pointer-events-none');" type="button"><span class="material-symbols-outlined text-[22px]">menu</span><span class="font-label-sm text-label-sm">Menu</span></button></div></nav><div class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 transition-opacity duration-300 opacity-0 pointer-events-none" id="drawer-backdrop" onclick="document.getElementById('clinical-drawer').classList.add('-translate-x-full');this.classList.add('opacity-0','pointer-events-none');"></div><aside class="fixed top-0 bottom-0 left-0 w-80 max-w-[85vw] bg-surface-container-lowest z-50 transform -translate-x-full flex flex-col shadow-[4px_0_24px_rgba(0,0,0,0.12)] pt-safe pb-safe" id="clinical-drawer"><div class="p-space-lg bg-surface-container-low"><div class="flex items-center justify-between mb-space-md"><div class="flex items-center gap-space-xs"><img alt="OSMF-RiskAI Emblem" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wcwp-177wlCQjZhn0eSfCfE6ZrirjeOr2hWf_7VVEjS8GEBP7wJF_r31CLVPCQkUPqcPB7ducIs4_UTGD1YT3yDAvCPuyVXD1dtqdLDu8Yw993cSZReMZaVVXWkqOAlpsT795nIZoa6xZ667cbG6C0-kQ1beth-ko6z5J12IZ3DVicayKdj5E8j4zWzIyk1mnjJe4iqHlc6N3fEdZ0wTWy2ZnuL4lzpDgWVPeIbYnYOujr2aT1-ymd47A"/><span class="font-headline-sm text-headline-sm text-primary">OSMF-RiskAI</span></div><button class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface rounded-lg" onclick="document.getElementById('clinical-drawer').classList.add('-translate-x-full');document.getElementById('drawer-backdrop').classList.add('opacity-0','pointer-events-none');"><span class="material-symbols-outlined">close</span></button></div><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-11 h-11 rounded-full object-cover ring-2 ring-secondary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6mrZmy6VwUbBRLWKKHSrsFjctqIpuI0JWNxHCmAvDbjAddOA2hsRaJKrX7P8VNLwa31XZWji1ygHkzxl6aCAnphAVb-_P6BHkPt_RUlESszMwH_K047dB3KPBMPP-2oTOgCXDgjVfWpd0M-Ud-GgJG_vpkTEwFFYVMYPXaz1HVZp5UQpfLtmI8i64SH-fFSilTmrUNHdNYmeJy7X869F6nwQB8q04bNNusys6rYKYTf1Sf5UW5Lnt"/><div class="min-w-0"><h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Dr. Sarah Jensen</h3><p class="font-body-sm text-body-sm text-on-surface-variant truncate">Oral Medicine Specialist</p><p class="font-label-sm text-label-sm text-secondary font-medium mt-0.5">Oncology Researcher</p></div></div></div><div class="flex-1 overflow-y-auto px-space-md py-space-sm space-y-space-md"><div class="space-y-1"><p class="px-space-sm py-1 font-label-sm text-label-sm text-outline uppercase tracking-wider">Clinical Operations</p><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">dashboard</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="patient-cases" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">folder_shared</span><span class="font-body-md text-body-md">Patient Cases</span></a><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="new-risk-assessment" href="#"><span class="material-symbols-outlined text-[20px] text-secondary">assignment_add</span><span class="font-body-md text-body-md">New Risk Assessment</span></a><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="prediction-history" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">history</span><span class="font-body-md text-body-md">Prediction History</span></a><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="follow-up-tracking" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">calendar_month</span><span class="font-body-md text-body-md">Follow-up Tracking</span></a><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="research-analytics" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">analytics</span><span class="font-body-md text-body-md">Research Analytics</span></a></div><div class="space-y-1"><p class="px-space-sm py-1 font-label-sm text-label-sm text-outline uppercase tracking-wider">Governance &amp; Setup</p><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="model-registry" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">model_training</span><span class="font-body-md text-body-md">Model Registry</span></a><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">description</span><span class="font-body-md text-body-md">Reports</span></a><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">verified_user</span><span class="font-body-md text-body-md">Audit Logs</span></a><a class="flex items-center gap-space-sm px-space-sm h-11 rounded-lg text-on-surface hover:bg-surface-container transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">settings</span><span class="font-body-md text-body-md">Settings</span></a></div></div><div class="p-space-md bg-surface-container-low space-y-space-sm"><div class="p-space-sm bg-surface-container-lowest rounded-lg border-l-2 border-primary"><p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Investigational Use: Multimodal decision-support aid. Not for standalone clinical diagnosis.</p></div><button class="w-full h-11 flex items-center justify-center gap-space-xs text-error font-body-md text-body-md rounded-lg hover:bg-error-container/40 transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">logout</span><span>Sign Out</span></button></div></aside></body></html>
